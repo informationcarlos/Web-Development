@@ -22,7 +22,7 @@ $pennies = 1;
  echo "<br>Well then, if I owe you ".$change." cents, I guess it makes sense to give you: <br><br>";
 
 
-if ($change > 1) {
+if ($change >= 1) {
 	echo ($change/$dollars-($change%$dollars/100))." Dollars<br>";
 	$quartersLeftover = $change%$dollars;
 	echo (int)($quartersLeftover/$quarters)." Quarters<br>";
