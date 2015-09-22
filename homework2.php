@@ -1,7 +1,7 @@
 <html>
 <h1>ISBN VALIDATOR</h1>
 
-	<form action="isbnvalidator.php" method="post">
+	<form action="homework2.php" method="post">
     	<input type="text" name="isbn" /><br />
     <input type="submit" name="submit" value="Validate!" />
 </form>
