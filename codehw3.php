@@ -157,14 +157,39 @@ foreach ($books as $book => $book_info) {
 // 		<hr>
 // 		<br><br><br><br><br><br><br>";
 
-coinToss(8);
+?>
+
+<img src= http://i.imgur.com/Uugv8c6.jpg width=50% height=50%>
+<h3>I'm a professional coin flipper. Just let me know how many heads in a row you want and I'll flip away until I get your result!</h3>
+	<form action="codehomework3.php" method="post">
+    	<input type="number" name="number" min = "0"/><br>
+    <input type="submit" name="submit" value="Flip!"/>
+	</form>
+<?php 
+
+if (isset($_POST['number'])) {
+	
+	$number = $_POST['number'];
+	
+	if ($number > 10 ) {
+
+		echo "Whoa buddy! I might be a professional coin flipper but I ain't got all day. Try aiming for 10 or less consecutive heads in a row.";
+	} else {
+	
+		coinToss($number);
+	}
+
+} else {
+	
+	echo "";
+}
 
 
 #####ugly function below######
 
 #create function called coin toss and assign argument as a variable
 function coinToss($number) {
-echo "We shall be attempting to get ".$number." heads in a row!<br><br>";
+echo "<br><br>".$number." heads in a row? Guess I better start flipping...<br><br>";
 
 #assign variable for heads and number of flips
 $heads = 0;
@@ -190,12 +215,16 @@ while ($heads < $number) {
 		echo "<img src=http://pet-happy.com/files/up/2013/02/cat-showss-his-butt.jpg height= 50 width= 50> ";
 	}
 }
-echo "<br>it took ".$flipNumbers." flips! <br><img src=http://i.giphy.com/mYMIHvlfI4Xzq.gif>";
 
+if ($flipNumbers < 101) {
+
+echo "<br>Can you believe it!? It only took ".$flipNumbers." flips! <br><br><img src=http://i.giphy.com/mYMIHvlfI4Xzq.gif>";
+
+} else {
+
+	echo "<br>Well that took a while! ".$flipNumbers." flips to finally get your result! <br><br><img src=http://i.giphy.com/mYMIHvlfI4Xzq.gif>";
+	}
 }
-
 ?>
 </body>
 </html>
-
-
