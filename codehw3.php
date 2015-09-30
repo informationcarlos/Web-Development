@@ -161,7 +161,7 @@ foreach ($books as $book => $book_info) {
 
 <img src= http://i.imgur.com/Uugv8c6.jpg width=50% height=50%>
 <h3>I'm a professional coin flipper. Just let me know how many heads in a row you want and I'll flip away until I get your result!</h3>
-	<form action="codehomework3.php" method="post">
+	<form action="codehw3.php" method="post">
     	<input type="number" name="number" min = "0"/><br>
     <input type="submit" name="submit" value="Flip!"/>
 	</form>
