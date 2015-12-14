@@ -1,6 +1,9 @@
 <?php
-$hn = 'localhost';
-$db = 'goal_zone';
-$un = 'root';
+
+$hn = '';
+$db = '';
+$un = '';
+
 $pw = '';
+
 ?>
